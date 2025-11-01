@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
-const Product = require("./models/product");
+const Product = require("./models/Product");
 
 const app = express();
 const PORT = process.env.PORT || 4000; // ✅ Use dynamic port for deployment
