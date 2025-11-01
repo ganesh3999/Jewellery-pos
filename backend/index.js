@@ -1,14 +1,13 @@
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
-const Product = require("./models/Product");
+const Product = require("./models/Product"); // Corrected import
 
 const app = express();
-const PORT = process.env.PORT || 4000; // ✅ Use dynamic port for deployment
+const PORT = process.env.PORT || 4000; // Use environment port if available
 
-// 🧠 MongoDB Connection
-// For Render deployment, replace with process.env.MONGO_URI
-mongoose.connect(process.env.MONGO_URI || "mongodb://127.0.0.1:27017/jewelleryPOS", {
+// 🧠 MongoDB Connection (Local or Atlas)
+mongoose.connect("mongodb://127.0.0.1:27017/jewelleryPOS", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
